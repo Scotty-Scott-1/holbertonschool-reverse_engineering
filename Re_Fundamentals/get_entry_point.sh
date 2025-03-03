@@ -27,7 +27,7 @@ elf_entry_point=$(readelf -h "$1" | grep "Entry point address:" | awk '{$1=""; $
 
 arg1=$(echo "${elf_magic:1}")
 arg2=$(echo "${elf_class:1}")
-arg3=$(echo "${elf_byte_order:1}")
+arg3=$(echo "${elf_byte_order:17}")
 arg4=$(echo "${elf_entry_point:3}")
 
 export file_name="$1"
